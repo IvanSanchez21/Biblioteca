@@ -10,7 +10,9 @@ import { MenuComponent } from './componentes/menu/menu.component';
 
 @NgModule({
   declarations: [AppComponent,
-                 MenuComponent],
+                 MenuComponent,
+              
+                 ],
                  
   imports: [BrowserModule, 
             IonicModule.forRoot(), 
