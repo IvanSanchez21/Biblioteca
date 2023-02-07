@@ -1,0 +1,82 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>INICIO DE SESION</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <img class="avatar"
+      src="https://www.ups.edu.ec/documents/20121/77326/Isotipo+Original.png/48fb2ada-b4e7-09df-b45a-884cda62cc9b?version=1.0&t=1620746533255&imagePreview=1"
+      alt="Logo de User">
+    <br>
+
+
+
+    <ion-item>
+      <ion-input type="text" name="email" placeholder="Email" type="text" [(ngModel)]="user.email">
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input type="password" name="password"  [(ngModel)]="user.password" placeholder="**************">
+        <ion-icon name="lock-closed"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+   
+
+    <div class="sign-btn-wrap">
+      <ion-button shape="round" type="submit" fill="solid" class="sign-btn" (click)="login(user.password)">Login</ion-button>
+    </div>
+    <div class="sign-btn-wrap">
+      <ion-button size="small" fill="outline" shape="round" color="light" href="/register">
+        Registrarse
+      </ion-button>
+    </div>
+    <div class="text-tag">
+      <span>Or via Social Media</span>
+    </div>
+    <div class="social-btns">
+
+      <ion-button  (click)="googleLogin()" fill="clear" class="googlebtn ion-no-padding">
+        <ion-img src="assets/icon/logoGoogle.png"></ion-img>
+      </ion-button>
+    </div>
+</ion-content> -->
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+
+    <div>
+      <img class="avatar"
+        src="../../assets/img/login.png"
+        alt="Imagen inicio de sesion">
+
+        <ion-item >
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-input [(ngModel)]="user.email" type="text" placeholder="Ingrese su Usuario" class="user" id="username" required=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-input [(ngModel)]="user.password" type="password" placeholder="Ingrese su Contraseña" class="contra" id="password" required=""></ion-input>
+        </ion-item>
+
+        <ion-button class="ingresar" expand="block" color="dark" (click)="login(user.password)">Ingresar</ion-button>
+
+      <ion-button class="registrar" type="submit" expand="block" color="dark" (click)="googleLogin()">Google
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

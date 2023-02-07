@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark" menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title>Libros</ion-title>
+    
+    <ion-buttons slot="end">
+      
+    <ion-button expand="full" color="dark" href="../crear-libro">
+        <ion-icon name="add-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="light">
+
+
+  <div class="fondo">
+    <ion-card *ngFor="let libro of libros1" class="card-item">
+
+      <ion-card-subtitle class="ion-text-center" style="color: #2D2F7A;">
+          <ion-label style="font-size: 13px;">{{libro.titulo}}</ion-label>
+      </ion-card-subtitle>
+  
+      <ion-card-content>  
+        <img class="avatar" src="{{libro.foto}}">
+    
+        <ion-card-subtitle><b>Codigo ISBN: </b>{{libro.codigoISBN}}</ion-card-subtitle>
+        <ion-card-subtitle><b>Autor </b>{{libro.autor}}</ion-card-subtitle>
+        <ion-card-subtitle><b>Editorial </b>{{libro.editorial}}</ion-card-subtitle>
+        <ion-card-subtitle><b>Categoria </b>{{libro.categoria}}</ion-card-subtitle>
+        <ion-card-subtitle><b>Cantidad </b>{{libro.Cantidad}}</ion-card-subtitle>
+     
+      </ion-card-content>
+        <div item-end>
+          <button ion-button clear (click)="actualizar(libro.id)">
+            <ion-icon name="create" style="zoom:2.0; background-color: white;"></ion-icon>
+          </button>
+          <button ion-button clear (click)="delete(libro.id)">
+            <ion-icon name="trash" style="zoom:2.0; background-color: white;"></ion-icon>
+          </button>
+        </div>
+
+    </ion-card>
+    
+       
+  </div>
+ <!-- <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button color="secondary" href="../crear-libro">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
+
+
+</ion-content>
