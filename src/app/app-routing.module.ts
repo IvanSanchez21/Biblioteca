@@ -21,10 +21,11 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
-  
-  
- 
- 
+  // {
+  //   path: 'home',
+  //   loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+  //   canActivate:[IngresadoGuard]
+  // },
   {
     path: 'crear-libro',
     loadChildren: () => import('./crear-libro/crear-libro.module').then( m => m.CrearLibroPageModule)
