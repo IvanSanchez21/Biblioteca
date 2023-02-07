@@ -1,16 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Crear</ion-title>
+    <ion-button color="" routerLink="/tabinical">
+      <ion-icon name="arrow-back-circle-outline"></ion-icon></ion-button>
+    <ion-title>Registrar</ion-title>
   </ion-toolbar>
 </ion-header>
 
   <ion-content>
     <div class="fondo">
-      <h3 style="text-align: center;" class="subtitulo encabezado">Ingrese tus datos</h3>
+      
+      <ion-card class="card-item">
       <ion-item>
-        <ion-label class="normal">
-          Fotografia:
-        </ion-label>
+        
+          Imagen:
+        
         <ion-buttons slot="end">
           <ion-button>
             <label for="file-upload">
@@ -26,53 +29,55 @@
   
       <ion-item>
         <ion-label class="normal" position="floating">
-          ISBN
+          Isbn:
         </ion-label>
         <ion-input name="nombre" [(ngModel)]="libro.codigoISBN" class="normal" type="text" inputmode="text">
         </ion-input>
       </ion-item>
       <ion-item>
         <ion-label class="normal" position="floating">
-          Titulo
+          Título:
         </ion-label>
         <ion-input name="nombre" [(ngModel)]="libro.titulo" class="normal" type="text" inputmode="text">
         </ion-input>
       </ion-item>
       <ion-item>
         <ion-label class="normal" position="floating">
-          Autor
+          Autor:
         </ion-label>
         <ion-input name="nombre" [(ngModel)]="libro.autor" class="normal" type="text" inputmode="text">
         </ion-input>
       </ion-item>
       <ion-item>
         <ion-label class="normal" position="floating">
-          Editorial
+          Editorial:
         </ion-label>
         <ion-input name="direccion" [(ngModel)]="libro.editorial" class="normal" type="text" inputmode="text">
         </ion-input>
       </ion-item>
       <ion-item>
         <ion-label class="normal" position="floating">
-          Categoría
+          Categoría:
         </ion-label>
         <ion-input name="celular" [(ngModel)]="libro.categoria" class="normal" type="text" inputmode="text">
         </ion-input>
       </ion-item>
         <ion-item>
           <ion-label class="normal" position="floating">
-            Cantidad
+            Cantidad:
           </ion-label>
           <ion-input name="celular" [(ngModel)]="libro.Cantidad" class="normal" type="number" inputmode="text">
           </ion-input>
         </ion-item>
 
+        
+          
 
-        <ion-button (click)="guardarUser()" shape="round" expand="block" class="normal"
-          color="primary">Guardar</ion-button>
-
-
-        <ion-button href="/tabinical" class="normal" shape="round" expand="block" color="danger">Cancelar</ion-button>
-        <br>
+      </ion-card>
+      <div item-end style="text-align: center;">
+        <button ion-button clear (click)="guardarUser()" style="margin-right: 20px;">
+          <ion-icon name="save-outline" style="zoom:2.0; background-color: white;"></ion-icon>
+        </button>
+      </div>
     </div>
   </ion-content>

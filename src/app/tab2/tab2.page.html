@@ -7,39 +7,52 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content color="light">
 
-  <ion-content>
 
+  <div class="fondo">
+    <ion-card *ngFor="let libro of libros1" class="card-item">
 
+      <ion-card-subtitle>
+        <ion-card-title class="tamanoletra ion-text-center" style="font-size: 18px;">{{libro.titulo}}</ion-card-title>
+      </ion-card-subtitle>
   
-      <div class="fondo">
-        <ion-card *ngFor="let libro of libros1" class="user-list">
-    
-          <ion-card-header>
-            <ion-card-title class="ion-text-center" >{{libro.titulo}}</ion-card-title>
-          </ion-card-header>
-          
-            <img class="avatar" src="{{libro.foto}}">
-          <ion-card-content>  
+      <ion-card-content> 
+        <div class="tamanoletra" style="text-align: center;"><img class="avatar" src="{{libro.foto}}"></div> 
         
-            <ion-card-subtitle><b>Codigo ISBN: </b>{{libro.codigoISBN}}</ion-card-subtitle>
-            <ion-card-subtitle><b>Autor </b>{{libro.autor}}</ion-card-subtitle>
-            <ion-card-subtitle><b>Editorial </b>{{libro.editorial}}</ion-card-subtitle>
-            <ion-card-subtitle><b>Categoria </b>{{libro.categoria}}</ion-card-subtitle>
-            <ion-card-subtitle><b>Cantidad </b>{{libro.Cantidad}}</ion-card-subtitle>
-        
-          </ion-card-content>
-          <ion-footer>
-            <ion-button color="secondary" shape="round" type="submit"  expand="full" (click)="VerCliente(libro.id)">
-              Ver Clientes</ion-button>
-            </ion-footer>
-            
-        </ion-card>
-     </div>
-  
-   
+      <ion-item>
+        <b class="tamanoletra">Codigo ISBN:</b>{{libro.codigoISBN}}
+      </ion-item>
 
- 
+      <ion-item>
+        <b class="tamanoletra">Autor: </b>{{libro.autor}}
+      </ion-item>
+        
+      <ion-item>
+        <b class="tamanoletra">Editorial: </b>{{libro.editorial}}
+      </ion-item>
+      
+      <ion-item>
+        <b class="tamanoletra">Categoria: </b>{{libro.categoria}}
+      </ion-item>
+      
+      <ion-item> 
+        <b class="tamanoletra">Cantidad: </b>{{libro.Cantidad}}
+      </ion-item>
+      
+      </ion-card-content>
+        <div item-end style="text-align: center;">
+          <button ion-button clear (click)="actualizar(libro.id)" style="margin-right: 25px;">
+            <ion-icon name="create" style="zoom:2.0; background-color: white;"></ion-icon>
+          </button>
+          <button ion-button clear (click)="delete(libro.id)">
+            <ion-icon name="trash" style="zoom:2.0; background-color: white;"></ion-icon>
+          </button>
+        </div>
+
+    </ion-card>
+  </div>
 </ion-content>
+
 
 

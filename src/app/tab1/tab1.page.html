@@ -17,44 +17,45 @@
 
 
 <ion-content color="light">
-
-
   <div class="fondo">
     <ion-card *ngFor="let libro of libros1" class="card-item">
 
       <ion-card-subtitle class="ion-text-center" style="color: #2D2F7A;">
-          <ion-label style="font-size: 13px;">{{libro.titulo}}</ion-label>
+          <ion-label style="font-size: 18px;">{{libro.titulo}}</ion-label>
       </ion-card-subtitle>
   
-      <ion-card-content>  
-        <img class="avatar" src="{{libro.foto}}">
-    
-        <ion-card-subtitle><b>Codigo ISBN: </b>{{libro.codigoISBN}}</ion-card-subtitle>
-        <ion-card-subtitle><b>Autor </b>{{libro.autor}}</ion-card-subtitle>
-        <ion-card-subtitle><b>Editorial </b>{{libro.editorial}}</ion-card-subtitle>
-        <ion-card-subtitle><b>Categoria </b>{{libro.categoria}}</ion-card-subtitle>
-        <ion-card-subtitle><b>Cantidad </b>{{libro.Cantidad}}</ion-card-subtitle>
-     
+      <ion-card-content> 
+        <div class="tamanoletra" style="text-align: center;"><img class="avatar" src="{{libro.foto}}"></div> 
+        
+      <ion-item>
+        <b class="tamanoletra">Codigo ISBN:</b>{{libro.codigoISBN}}
+      </ion-item>
+
+      <ion-item>
+        <b class="tamanoletra">Autor: </b>{{libro.autor}}
+      </ion-item>
+        
+      <ion-item>
+        <b class="tamanoletra">Editorial: </b>{{libro.editorial}}
+      </ion-item>
+      
+      <ion-item>
+        <b class="tamanoletra">Categoria: </b>{{libro.categoria}}
+      </ion-item>
+      
+      <ion-item> 
+        <b class="tamanoletra">Cantidad: </b>{{libro.Cantidad}}
+      </ion-item>
+      
       </ion-card-content>
-        <div item-end>
-          <button ion-button clear (click)="actualizar(libro.id)">
+        <div item-end style="text-align: center;">
+          <button ion-button clear (click)="actualizar(libro.id)" style="margin-right: 25px;">
             <ion-icon name="create" style="zoom:2.0; background-color: white;"></ion-icon>
           </button>
           <button ion-button clear (click)="delete(libro.id)">
             <ion-icon name="trash" style="zoom:2.0; background-color: white;"></ion-icon>
           </button>
         </div>
-
     </ion-card>
-    
-       
   </div>
- <!-- <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-  <ion-fab-button color="secondary" href="../crear-libro">
-    <ion-icon name="add"></ion-icon>
-  </ion-fab-button>
-</ion-fab> -->
-
-
-
 </ion-content>
